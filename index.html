@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading1">Hello this is me</h1>
+    <div id="box"></div>
+    <ul id="list1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <h1>My college is veery good
+    </h1>
+    <ul>
+        <li>ram</li>
+        <li>shyam</li>
+        <li>aam</li>
+        <li>kam</li>
+        <li>opi</li>
+    </ul>
+    <button>clcik ME</button>
+    <h1>Praveen is a good cricket palyer</h1>
+    <button class="btn">submit it</button>
+    <button id="btn-main">Main Button</button>
+    <script>
+        const heading=document.querySelectorAll('h1');
+        console.log(heading);
+        const btn=document.querySelector
+        ('.btn');
+        console.log(btn);
+        console.log(btn.parentElement);
+        const heading1=document.getElementById('heading1');
+        // for changing text content
+        heading1.textContent='Hello i am web';
+        //innerHtml
+        const box=document.getElementById('box');
+        box.innerHTML=`<p>Hello my name is parveen kumar i am olaying cricket and i am a web develiper</p><br>
+        <button class="btn">submit it</button>`;
+        //createElement:-use for creating element in html
+        const list1=document.getElementById('list1');
+        const li=document.createElement('li');
+        li.textContent="This is changing element";
+        list1.appendChild(li);
+        const btnm=document.getElementById('btn-main');
+        btnm.addEventListener('click',()=>{
+            console.log('Bhai button click kar diya hai');
+        })
+        ul.addEventListener(
+            "clcik",
+(e)=>{
+    console.log(e.target.textContent);
+    }
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="click">Click me</button>
+    <script>
+        const click = document.getElementById('click');
+        click.addEventListener('click', () => {
+            console.log('Button clicked!');
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!-- Write a program when i click on add button the input value which i write on input area add to the list below it -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+     <input type="text" id="add" placeholder="Enter item to add">
+        <button id="btn"> Click Me</button>
+<ul id="box">
+</ul>
+
+    <script>
+        const btn=document.getElementById('btn');
+        const box=document.getElementById('box');
+        btn.addEventListener('click',()=>{
+            const input=document.getElementById('add');
+            const li=document.createElement('li');
+            li.textContent=input.value;
+            box.appendChild(li);
+        });
+
+    </script>
+  
+</body>
+</html>
