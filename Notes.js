@@ -1263,8 +1263,40 @@ import { Component } from "react"
 // React Props:->
 // Jab hm basically ek Component se dusre component 
 
+// Usestate:-Jab value ko hme run time par change karna hai at that time we have to use the concept of usestate.
+// 1.Current value
+// 2.ek function jisse ye current value change ki ja sake
+// 3.Initial Value 
 
+// Syntax:-
+// Const[currstate,setcurrstate]=usestate(initial value)
 
+// React Lifecycle:-
+// ->ComponentDidMount()->component jab pehlinbar screen upar aayega
+// ->ComponentDidUpdate()->to change screen over update
+// ->ComponentWillUnmount()->
+
+// useeffect:->
+// it is used to handle side effects like api calling timera etc.
+// Synatx:->
+// useeffect(()=>{
+    // console.log("Hello");},[dependency])
+    //1 ->functional component jitni bar run karega utni bar useeffect ka andar lika code render if not pass any dependence
+// 2.->id depedency array empty ho to ek bar chala ga jo useeffect wala code aur function kitni bar render kara
+// 3->value ho->depend ho value(every time dependency will change,code written inside useeffect will run.)
+
+// React Events:-->>
+// in Js:->
+// <button onclick="hello()">Click></button>
+
+// In React js we will use CameCase for defining any event:->
+// <button onClick={Hello}> click</button> 
+
+//Synthetic Events:->React will not directly use orginal event of browser
+// ->React will create a wrapper that will be known as syntheic event.
+// ->In case of normal js events in different browsers there can be different things,but once we will be use wrapper then
+//  it will hide all these differences. 
+// 
 
 
 
