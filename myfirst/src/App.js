@@ -212,17 +212,130 @@
 // export default App;
 
 
-import React from 'react';
-import Search from './components/Search';
+// import React from 'react';
+// import Search from './components/Search';
 
-function App() {
+// function App() {
+//   return (
+//     <div >
+//       <Search/>
+//     </div>
+//   );
+// }
+// export default App;
+
+
+// import React from 'react'
+// import ChecksyntheticEvent from './components/ChecksyntheticEvent'
+// const App = () => {
+//   return (
+//     <div>
+//       <ChecksyntheticEvent/>
+//     </div>
+//   )
+// }
+// export default App
+
+
+
+// import React from 'react'
+// import Consoledata from './components/Consoledata'
+// const App = () => {
+//   return (
+//     <div>
+//       <Consoledata/>
+//     </div>
+//   )}
+
+// export default App
+
+
+// import React from 'react'
+// import FindName from './components/FindName'
+// const App = () => {
+//   return (
+//     <div>
+//       <FindName />
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import Mainloanding from './components/Mainloanding'
+// const App = () => {
+//   return (
+//     <div>
+//       <Mainloanding/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import Formvalidation from './components/Formvalidation'
+// const App = () => {
+//   return (
+//     <div>
+//       <Formvalidation/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React from 'react'
+import Persondata from './components/Persondata'
+const App = () => {
   return (
-    <div >
-      <Search/>
+    <div>
+      <Persondata/>
     </div>
-  );
+  )
 }
-export default App;
+
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

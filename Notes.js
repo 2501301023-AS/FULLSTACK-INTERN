@@ -1296,7 +1296,17 @@ import { Component } from "react"
 // ->React will create a wrapper that will be known as syntheic event.
 // ->In case of normal js events in different browsers there can be different things,but once we will be use wrapper then
 //  it will hide all these differences. 
-// 
+// We don't need to call function at time of adding an event.
+// {/* <button on click={hello()}></button> */}
+// ->ye render hote hi chal jayega no nedd to click on anything.
+
+// Form validation in react js:->defie which type of data enter in box
+// ->When i am clicking on submit button at that time two things happen
+// 1.Page Refresh
+// 2.State ki value automatic default pe aa ja rhi hai
+// Kyunki ye browser ka default behavior hai
+
+
 
 
 
