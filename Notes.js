@@ -1306,6 +1306,46 @@ import { Component } from "react"
 // 2.State ki value automatic default pe aa ja rhi hai
 // Kyunki ye browser ka default behavior hai
 
+// React is a single page application:->SINGLE HTML FILE ME KAAM HOGA
+// REACT ROUTER DOM:->
+// commande:->npm install react-router-dom
+// index.js is a file where we reflect the change globally the project
+//1. BrowserRouter:->it provides all superpower of routing too complete project.
+//2. Routes:->it is like a container inside that we are writing route.
+//3. Route:->route will askk you only two thinga
+// 1.at which url you want hit (/dsa /about /home 
+// 2.corresponding to that url which component you want to load.
+
+// Syntax:-
+{/* <Route
+path="/about"
+element={Navbar}
+>
+</Route> */}
+
+// Deployment:->1.aws(paid)
+// 2.render(hard),versel,netlify(easy)
+// 
+
+// Context Api in react Js:->
+// Props drilling->ek problem  us problem ka solution context api hai:->(Jab kayi sare components depply nested 
+// ho aur kisi ek component se kisi dusra component ko ham data pass karna hai too hame baki bacha component me unnessary expose karna padta hai.)
+// Problem->let suppose 4 component:->deeply nested hai:->means component ka anar component like nested list.
+// 1.component 1->{name } store--
+// component 2                <-|
+// component 3
+// component 4
+// call by comp1->comp2->comp3->comp4
+
+// ->It allows data to be shared globally without passing props manually.
+// ->ek common storage area hai jha par sari value store ki jayegi aur sab components directly vo value access kar payenge.
+// Flow->
+// Context->Provider->Entire App->Any Component->useContext()
+// 1.CreateContext()->ye Cntext object bnata h ya ye empty box create ho gya.
+// 2.Provider->It is used For sending value 
+// 3.useContext()->Ye kya karaga ye sabko variable ki value batega or ye provider k value return karega.
+
+
 
 
 
