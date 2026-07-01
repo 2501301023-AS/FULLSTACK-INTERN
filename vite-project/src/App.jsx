@@ -139,13 +139,161 @@
 
 
 
+// import React from 'react';
+// import { ThemeProvider, useTheme } from './Components/ThemeContext';
+// import './index.css';
 
 
+// const MainApp = () => {
+//   const { theme, toggleTheme } = useTheme();
+
+//   return (
+//     <div className="container">
+//       <h1>Current Mode: {theme.toUpperCase()}</h1>
+//       <button onClick={toggleTheme} className="toggle-btn">
+//         Switch to {theme === 'light' ? 'Dark 🌙' : 'Light ☀️'}
+//       </button>
+//     </div>
+//   );
+// };
+// const App = () => {
+//   return (
+//     <ThemeProvider>
+//       <MainApp />
+//     </ThemeProvider>
+//   );
+// };
+
+// export default App;
 
 
+// import React from 'react'
+// import CounterUsingUseReducer from './Components/CounterUsingUseReducer'
+// const App = () => {
+//   return (
+//     <div>
+//       <CounterUsingUseReducer/>
+//     </div>
+//   )
+// }
+
+// export default App
+import React, { useReducer, useState } from "react";
 
 
+import products from './Components/Products';
+import { CartReducer, initialState } from './Components/CartReducer'
+const App = () => {
+  const [state, dispatch] = useReducer(CartReducer, initialState);
+  const [coupon, setCoupon] = useState("");
+  
+  return (
+    <div>
+      <h1> Shopping Cart</h1>
+      <h2> Total : Rs {state.total}</h2>
+     <input
+  type="number"
+  placeholder="Discount %"
+  value={coupon}
+  onChange={(e) => {
+    const value = e.target.value;
 
+    if (Number(value) >= 100) {
+      alert("Coupon is not valid!  Enter Valid Coupon")
+      
+      return;
+    }
+
+    setCoupon(value);
+  }}
+/>
+
+<button
+  onClick={() =>
+    dispatch({
+      type: "APPLY_DISCOUNT",
+      payload: Number(coupon),
+    })
+  }
+>
+  Apply Coupon
+</button>
+
+<button
+  onClick={() => dispatch({ type: "CLEAR_CART" })}
+>
+  Clear Cart
+</button>
+      {
+        products.map((product) => (
+          <div key={product.id}
+            style={{
+              border: "1px solid gray",
+              padding: 15,
+              marginBottom: 15
+            }}
+          >
+
+            <h3>{product.name}</h3>
+            <p>{product.price}</p>
+            <button onClick={() => dispatch({
+  type: "ADD_ITEM",
+  payload: product,
+})}>Add to Cart</button>
+          </div>
+        ))
+      }
+     
+    <h2>Cart</h2>
+
+{state.cart.map((item) => (
+  <div
+    key={item.id}
+    style={{
+      border: "1px solid black",
+      padding: "10px",
+      marginBottom: "10px",
+    }}
+  >
+    <h3>{item.name}</h3>
+
+    <p>Price : ₹{item.price}</p>
+
+    <button
+      onClick={() =>
+        dispatch({
+          type: "DECREMENT",
+          payload: item.id,
+        })
+      }
+    >
+      -
+    </button>
+
+    <span style={{ margin: "0 10px" }}>
+      {item.quantity}
+    </span>
+
+    <button
+      onClick={() =>
+        dispatch({
+          type: "INCREMENT",
+          payload: item.id,
+        })
+      }
+    >
+      +
+    </button>
+  </div>
+))}
+
+<h3>Discount : {state.discount}%</h3>
+<h2>Total : ₹{state.total}</h2>
+    </div>
+  )
+}
+
+export default App
 
 
 

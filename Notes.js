@@ -1345,10 +1345,15 @@ element={Navbar}
 // 2.Provider->It is used For sending value 
 // 3.useContext()->Ye kya karaga ye sabko variable ki value batega or ye provider k value return karega.
 
-
-
-
-
+// useReducer Hook->To avoid multiple state over a single components.
+// Syntax:-
+// const[state,dipatch]=useReducer(reduce,inititalstate)
+// ->Reducer->
+// function reducer(State,action){
+// }
+// ->Initial State
+// ->Dispatch->
+// flow:-> Click->dispatch->reducer function->State ko update->re-render
 
 
 
