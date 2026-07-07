@@ -15,7 +15,7 @@
 // setTimeout(()=>{
 // console.log(i);},1000;} output:- 4 4 4
 
-import { Component } from "react"
+import { Component, useCallback } from "react"
 
 
 // Let->Introduction In Es6
@@ -1355,16 +1355,43 @@ element={Navbar}
 // ->Dispatch->
 // flow:-> Click->dispatch->reducer function->State ko update->re-render
 
+// useCallback & useMemo:- 
+// ->Render  kya hota hai:-> Ye function ke andar jo bhi calculation ho rhi hai wo har bar re-render ho rhi hai.
+// UseMenmo Hook:-> unnecessary re-rendering ko avoid karne ke liye useMemo ka use karte hai.
+// ->useMemo ka use tab karte hai jab koi function ka output heavy calculation ka result ho or uska output same ho to usko re-render karne ki jarurat nahi hai.
+// kisi expensive calculation ka result ko cache karta hai taki innecessary caluclation dubara na ho.
+// Syntax:-
+// const value=useMemo(()=>{
+// return calulation;
+// },[dependency])
 
+// UseCallback Hook-> Kisi Function ko memorize karta hai taki render pe naya function na create ho.
+//Syntax:-
+// const function=
 
+// useCallback(()=>{})
 
+// Talvent Css
 
+// Redux:->it is a library which is used for state management in react js.
+// Flow:-> dispatch()->action->reducer->store->useselector()->component
+//1.Store:->pure application ka database hai jha par sari value store ki jayegi.
+// ex:-> {
+// cart:[],
+// user:{},}
+// 2.state:->store me jo bhi value store ki jayegi usko state bolte hai.
+// ex:-
+// cart=[{id:1,name:"laptop"}]
+// 3.Action:->kya kam karna hai
+// ex:-> Add product remove product incresase product
+// 4.Reducer:-> action jo ayega upar se us par kam ye krega.
+// 5.Dispatch:->ye reducer ko action tak bhejta hai.
+// 6.useSelector:->to take data from store
+// const cart=useSelector((state)=>state.cart.items)
+// Redux Toolkit:->it make redux easy
+// react-redux:->it connects react to redux
 
-
-
-
-
-
+// Backend:->
 
 
 
