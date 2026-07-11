@@ -1392,17 +1392,80 @@ element={Navbar}
 // react-redux:->it connects react to redux
 
 // Backend:->
+// Mangodb Database:->It is used without sql.
+// sql:->it used for table based data and relational data
+// In mangodb at place of 
+// table->collection
+// row->document
+// column->field
+// It is no sql database
+// Document:->
+// {
+// "id":1,
+// "name":"ram",
+// "email":"ram34@gmail.com",
+// "phone":"848484"}
+
+// Crud operation
+
+// Dependancy:->Kisi ek project ko run karna ka liya kitni external library ki need hai will known as dependency.
+// -> normal dependency
+// ->dev dependency
+// Mongoos-> iska simple kam itna hai h ki 
+// Dotenv:->(.env file ke  )andar ki details ka read me sensitive data store karte hai like passworrd,api,key,port,etc.we not share to github 
+
+// How to connect Mongodb with the help of Mongoos and node.
+// kisi ek project me agar hame database ka use karna hai to hame 3 cheeze chahiye
+
+// Mongodb Schema:->is just a blueprint of the collection and types of data ana wala hai 
+
+// C R U D 
+// C:->
+// Method 
+// 1.Save
+// 2.Create
+// 3.Insert Method:->
+// (i) Insert One
+// (ii)InsertMany
+
+// Read:->
+// Projection:->Agar hama ek specified number of field dikhani hai thenwe have to use it.
+
+// u:->
+// Update:->field value update
+// Method:->
+// 1.UpdateOne:->kis user ya kis document ko update karna hai 
+// Syntax:->
+// await Student.updateOne(
+// filter,update
+// )
+
+// $set->ye kisi field ki value ko change krne ke liye use krte h,
+
+// $inc:->
+// 2.UpdateMany:->jab hama kayi sare document ki value ko match krake koi value update karni ho.
+
+// FindOneAndUpdate:->to return updated value we have to use this method.
 
 
+// $push:->kisi array me value push or update karni hogi
+// $each:->jab array ka andar multiple value insert krni ho
+// $pull:->it is used to delete value in any array
+// $POP:->it is used to remove first or last element.
+// $unset:->to remove the value
+// $rename:->to change the field name
 
 
-
-
-
-
-
-
-
+// Aggregation Pipeline:->When we have to proceed the operation followed by one another.
+// 10000 objects in array->filter 1->300->filter 2->100
+// ek stage ka jo result hai who next result ka liya dataset bnega.
+// Method:->
+// Collectionname.aggregate(
+// [
+// stage1,
+// stage2,
+// stage3
+// ])
 
 
 
